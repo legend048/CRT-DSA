@@ -14,7 +14,12 @@ int maxSubarraySum(vector<int> &arr) {
 }
 
 int main() {
-    vector<int> arr = {-5, 4, 2, -3, -8};
-    cout << maxSubarraySum(arr); 
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    if (!(cin >> n)) return 0;
+    vector<int> arr(n);
+    cout << "Enter the elements of the array separated by spaces: ";
+    for (int i = 0; i < n; ++i) cin >> arr[i];
+    cout << maxSubarraySum(arr);
     return 0;
 }
